@@ -8,7 +8,7 @@ const port = process.env.PORT || 3000;
 app.post("/dialogflow-fulfillment", (request, response) => {
   const queryResult = request.body.queryResult;
   const product = queryResult.parameters.product;
-  const searchUrl = `https://www.amazon.com/s?k=${encodeURIComponent(product)}`;
+  const searchUrl = `https://www.amazon.in/s?k=${encodeURIComponent(product)}`;
 
   const fulfillmentText = `${searchUrl}`;
   const fulfillmentResponse = {
